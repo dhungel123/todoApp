@@ -31,7 +31,7 @@ class LocalNoteRepository implements INoteRepository{
 
   @override
   Future<Either<String, void>> updateTodo({required String id, required String title, required String description})  async{
-    await databaseServices.updateNote(id:id, title: title, description: description);
+    await databaseServices.updateNote(id:id, title: title, description: description, sync: false);
     return Right(null);
 
 

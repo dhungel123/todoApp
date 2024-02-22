@@ -51,6 +51,7 @@ dependencies:
   flutter_slidable: ^3.0.1
   bloc_concurrency:   ^0.2.3
   sqflite: ^2.3.0
+  connectivity_plus: ^5.0.2
 
 
 dev_dependencies:

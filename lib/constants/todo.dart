@@ -24,6 +24,13 @@ class Todo{
       description: map['description'],
     );
   }
+  Map<String,dynamic> toMap(){
+    return {
+      '_id':id,
+      'title':title,
+      'description':description
+    };
+  }
 
 
 }
