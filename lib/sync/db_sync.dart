@@ -23,7 +23,6 @@ class DbSyncCubit extends Cubit<CommonState>{
                emit(CommonSuccessState(data: null));
              }
           }
-
         });
   }
   toogleDialogStatus(bool status){

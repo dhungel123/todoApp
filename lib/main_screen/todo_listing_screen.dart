@@ -10,6 +10,7 @@ import 'package:todo_list/cubit/common_state.dart';
 import 'package:todo_list/cubit/delete_todo_cubit.dart';
 import 'package:todo_list/cubit/fetch_todo_cubit.dart';
 import 'package:todo_list/database/database_services.dart';
+import 'package:todo_list/sync/sync_todo_dialog.dart';
 
 import '../Routes/routes.dart';
 import '../constants/todo.dart';
@@ -39,11 +40,10 @@ class _TodoListingScreenState extends State<TodoListingScreen> {
         centerTitle: true,
         actions: [
           IconButton(onPressed: () async {
-            // final data = await DatabaseServices().getNotSyncData();
-            // print(data);
+            showSyncDialog(context);
             final result = await Connectivity().checkConnectivity();
             print('connection $result');
-          }, icon: Icon(Icons.abc))
+          }, icon: Icon(Icons.sync,size: 30,))
         ],
       ),
       floatingActionButton: FloatingActionButton(

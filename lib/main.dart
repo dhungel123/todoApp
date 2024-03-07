@@ -47,8 +47,6 @@ class MyApp extends StatelessWidget {
                 create: (context)=> DbSyncCubit(
                     checkConnectionCubit: context.read<CheckConnectionCubit>()),
             ),
-            BlocProvider(create: (context)=> UploadTodoCubit(
-                repository: context.read<RemoteNoteRepository>())),
             BlocProvider(
               create: (context) =>
                   DeleteTodoCubit(repo: context.read<RemoteNoteRepository>()),

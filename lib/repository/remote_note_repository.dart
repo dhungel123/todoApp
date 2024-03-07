@@ -30,7 +30,7 @@ class RemoteNoteRepository implements INoteRepository {
       final data = convertedList.map((e) => Todo.fromMap(e)).toList();
       _todos.clear();
       await databaseServices.clear();
-      _todos.addAll(data);
+      _todos.addAll(data);g
       for( var _newTodo in _todos){
         await databaseServices.addNote(
             id:_newTodo.id,
